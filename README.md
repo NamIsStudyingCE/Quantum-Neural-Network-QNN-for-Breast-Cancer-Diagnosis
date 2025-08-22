@@ -1,30 +1,72 @@
-# Quantum-Neural-Network-QNN-for-Breast-Cancer-Diagnosis
-Xây dựng mô hình QNN (Quantum Neural Network) bằng Qiskit để phát hiện ung thư vú trên dataset BreastMNIST. Nghiên cứu nhằm đánh giá tiềm năng áp dụng học máy lượng tử trong y học.
+## 1. Introduction
 
-## 📂 Dữ liệu
+This project explores the application of Quantum Neural Networks (QNNs) for breast cancer detection using the BreastMNIST dataset. The main goal is to evaluate the feasibility and potential of quantum machine learning in healthcare, particularly in medical image classification under resource-constrained scenarios.
 
-Dataset: BreastMNIST
+Objective: Detect breast cancer (benign vs malignant) from X-ray images.
 
-Đặc điểm: 7.780 ảnh X-quang tuyến vú (binary classification: lành tính / ác tính)
+Quantum Model: QNN built with Qiskit.
 
-Tiền xử lý: Trích xuất đặc trưng thống kê (mean, std, entropy)
+Benchmark: Compared against a classical neural network trained on the same features.
 
-## 🧠 Mô hình & Phương pháp
+Focus: Circuit depth optimization, feature encoding strategies, and scalability analysis.
 
-Mô hình lượng tử: QNN (Qiskit)
+## 2. Dataset
 
-So sánh: Benchmark với mạng nơ-ron cổ điển (CNN)
+Dataset: BreastMNIST (MedMNIST collection)
 
-Tối ưu: Giảm độ sâu mạch, tinh chỉnh phương pháp mã hóa feature
+Samples: 7,780 mammogram images.
 
-## 📊 Kết quả
+Task: Binary classification (benign vs malignant).
 
-Chứng minh tính khả thi của QNN trong bối cảnh dữ liệu hạn chế
+Preprocessing: Extracted statistical features (mean, std, entropy) for both classical and quantum pipelines.
 
-Phân tích độ mở rộng (scalability) và tính ứng dụng trong chẩn đoán y tế
+## 3. Notebooks
 
-## 🚀 Triển khai
+This project includes three main notebooks:
 
-Nghiên cứu sẽ được cải tiến vào Project 2 về AI lượng tử trong y học
+QuantumSimulation.ipynb
 
-Chuyển sang thư viện Pennylane để tối ưu hóa cho học máy lượng tử
+Implements a QNN with Qiskit on raw BreastMNIST features.
+
+Establishes baseline performance of quantum circuits without feature selection.
+
+QuantumSimulationUsingFeatureSelectedFile.ipynb
+
+Incorporates feature selection (mean, std, entropy) prior to quantum encoding.
+
+Reduces circuit depth and improves QNN performance and training stability.
+
+TrichXuatDacTrung_ModelTruyenThong.ipynb
+
+Implements a classical neural network (PyTorch) trained on the same extracted features.
+
+Provides a benchmark to compare classical vs quantum approaches.
+
+## 4. Results
+
+QNN demonstrates feasibility in binary medical classification tasks under feature-reduced settings.
+
+Classical NN generally achieves higher accuracy but QNN shows promising scalability.
+
+Results highlight the potential role of QNNs in future medical diagnostic pipelines.
+
+## 5. Future Work
+
+Library migration: Transitioning to PennyLane for improved flexibility and hybrid training.
+
+Optimization: Experimenting with circuit depth reduction and feature maps for larger datasets.
+
+Applications: Integrating QNN pipelines into broader healthcare AI research (Project 2).
+
+## 6. Author
+
+Nguyễn Hoàng Nam
+
+Nguyễn Thái Nguyên
+
+Email: 
+
+ng.h.nam0802@gmail.com (Nguyễn Hoàng Nam)
+
+
+LinkedIn: www.linkedin.com/in/nghnam0802
